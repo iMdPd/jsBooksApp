@@ -30,6 +30,8 @@
   const render = function () {
     /* for each book of dataSource.books */
     for (const book of dataSource.books) {
+      book.ratingBgc = determineRatingBgc(book.rating);
+      book.ratingWidth = book.rating * 10;
       /* generate object of every book from array dataSource.books */
       const linkHTMLData = book;
       /* generate HTML based on template */
@@ -80,8 +82,9 @@
     const filtersContianer = document.querySelector(select.filters);
 
     filtersContianer.addEventListener('click', function (event) {
-      /*       const inputValue = event.target.getAttribute('value');
-      if (
+      /* make new constant named "inputValue" and give it the 'value' attribute of clicked input  */
+      const inputValue = event.target.getAttribute('value');
+      /*        if (
         event.target.tagName == 'INPUT' &&
         event.target.getAttribute('type') == 'checkbox' &&
         event.target.getAttribute('name') == 'filter'
@@ -89,8 +92,10 @@
         console.log('value:', inputValue);
       } */
 
+      /* check if input is checked */
       if (event.target.checked == true) {
-        console.log('checked');
+        /* push inputValue to filters array */
+
         filters.push(inputValue);
       } else {
         const removeValue = filters.indexOf(inputValue);
@@ -98,7 +103,45 @@
         filters.splice(removeValue, 1);
       }
       console.log('filters:', filters);
+      filterBooks();
     });
+  };
+  const filterBooks = function () {
+    for (let bookData of dataSource.books) {
+      let shouldBeHidden = false;
+      for (const filter of filters) {
+        if (!bookData.details[filter]) {
+          shouldBeHidden = true;
+          break;
+        }
+      }
+      const bookContainer = document.querySelectorAll('a.book__image');
+      for (let i = 0; i < bookContainer.length; i++) {
+        if (bookContainer[i].getAttribute('data-id') == bookData.id) {
+          if (shouldBeHidden) {
+            bookContainer[i].classList.add('hidden');
+          } else {
+            bookContainer[i].classList.remove('hidden');
+          }
+        }
+      }
+    }
+  };
+
+  const determineRatingBgc = function (rating) {
+    let background = '';
+
+    if (rating < 6) {
+      background = 'linear-gradient(to bottom,  #fefcea 0%, #f1da36 100%)';
+    } else if (rating > 6 && rating <= 8) {
+      background = 'linear-gradient(to bottom, #b4df5b 0%, #b4df5b 100%)';
+    } else if (rating > 8 && rating <= 9) {
+      background = 'linear-gradient(to bottom, #299a0b 0%, #299a0b 100%)';
+    } else if (rating > 9) {
+      background = 'linear-gradient(to bottom, #ff0084 0%, #ff0084 100%)';
+    }
+
+    return background;
   };
 
   render();
