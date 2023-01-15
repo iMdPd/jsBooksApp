@@ -27,6 +27,9 @@
     constructor() {
       const thisBookList = this;
 
+      thisBookList.favouriteBooks = [];
+      thisBookList.filters = [];
+
       thisBookList.initData();
       thisBookList.getElements();
       thisBookList.render();
@@ -41,8 +44,6 @@
 
     getElements() {
       const thisBookList = this;
-      thisBookList.favouriteBooks = [];
-      thisBookList.filters = [];
 
       thisBookList.bookContianer = document.querySelector(select.book.list);
       thisBookList.filtersContianer = document.querySelector(select.filters);
