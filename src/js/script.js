@@ -52,71 +52,47 @@
     render() {
       const thisBookList = this;
 
-      /* for each book of thisBookList.data */
       for (const book of thisBookList.data) {
-        /* add new book data named ratingBgc */
         book.ratingBgc = thisBookList.determineRatingBgc(book.rating);
-        /* add new book data named ratingWidth */
         book.ratingWidth = book.rating * 10;
-        /* generate object of every book from array thisBookList.data */
         const linkHTMLData = book;
-        /* generate HTML based on template */
         const linkHTML = templates.bookList(linkHTMLData);
-        /* create element using utils.createElementFromHTML */
         const generatedDOM = utils.createDOMFromHTML(linkHTML);
-        /* add element to thisBookList.bookContianer */
         thisBookList.bookContianer.appendChild(generatedDOM);
       }
     }
 
     initActions() {
       const thisBookList = this;
-      /* add event listener on 'dblclick' to thisBookList.bookContianer */
       thisBookList.bookContianer.addEventListener('dblclick', function (event) {
-        /* prevent default action for this event */
         event.preventDefault();
 
-        /* make new const for event.trget.offsetParent */
         const bookLink = event.target.offsetParent;
 
         if (bookLink.classList.contains(select.book.image)) {
-          /* get 'data-id' attribute from the clicked link */
           const bookLinkDataId = bookLink.getAttribute('data-id');
-          // console.log('bookLinkDataId:', bookLinkDataId);
 
           if (!thisBookList.favouriteBooks.includes(bookLinkDataId)) {
-            /* add class favorite to bookLink */
             bookLink.classList.add(className.favorite);
-            /* push bookLinkDataId 'data-id' attribute to favouriteBooks Array */
             thisBookList.favouriteBooks.push(bookLinkDataId);
           } else {
-            /* remove class favorite to bookLink */
             bookLink.classList.remove(className.favorite);
-            /* get indexOf bookLinkDataId from favouriteBooks Array */
             const removeProduct =
               thisBookList.favouriteBooks.indexOf(bookLinkDataId);
-            /* delete bookLinkDataId from favouriteBooks Array */
             thisBookList.favouriteBooks.splice(removeProduct, 1);
           }
-          console.log('favouriteBooks:', thisBookList.favouriteBooks);
         }
       });
 
       thisBookList.filtersContianer.addEventListener('click', function (event) {
-        /* make new constant named "inputValue" and give it the 'value' attribute of clicked input  */
         const inputValue = event.target.getAttribute('value');
 
-        /* check if input is checked */
         if (event.target.checked == true) {
-          /* push inputValue to filters array */
-
           thisBookList.filters.push(inputValue);
         } else {
           const removeValue = thisBookList.filters.indexOf(inputValue);
-          // console.log('removeValue:', removeValue);
           thisBookList.filters.splice(removeValue, 1);
         }
-        // console.log('filters:', filters);
         thisBookList.filterBooks();
       });
     }
