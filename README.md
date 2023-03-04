@@ -18,12 +18,11 @@
 
 ## 🚀 <a id="overview">Quick overview</a>
 
-Project represents a library of books. Website was developed using JavaScript classes and Handlebars template. Each book has a title, price, cover and rating.
-Books data is stored locally in the data.js file. The website has two functionalities:
+The project represents a library of books. The website was developed using JavaScript classes and a Handlebars template. Each book has a title, price, cover, and rating. Book data is stored locally in the data.js file. The website has two functionalities:
 
-1. Ability to filter books by category. <br /> Selecting a category grays out books that don't match the selected category.
-2. Like a book by double-clicking on the cover. <br />
-   Double clicking on the cover will add a heart in the upper right corner and will scale the cover.
+1. The ability to filter books by category <br /> Selecting a category grays out books that don't match the selected category.
+2. Open a book by double-clicking on the cover.
+   Double clicking on the cover will add a heart in the upper right corner and scale the cover.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
