@@ -9,6 +9,7 @@
 
 <p align="center">
   <a href="#overview">Quick overview</a> •
+  <a href="#languages">Languages&Tools</a> •
   <a href="#demo">Demo</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#profile">Checkout</a>
@@ -26,7 +27,7 @@ The project represents a library of books. Books App is a single-page applicatio
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🛠️ <a id="overview">Languages and tools</a>
+## 🛠️ <a id="languages">Languages & tools</a>
 
 |                                                                   Language / Tool                                                                    | Description                                                                 |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------- |
