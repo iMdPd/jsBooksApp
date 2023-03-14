@@ -18,13 +18,24 @@
 
 ## 🚀 <a id="overview">Quick overview</a>
 
-The project represents a library of books. The website was developed using JavaScript classes and a Handlebars template. Each book has a title, price, cover, and rating. Book data is stored locally in the data.js file. The website has two functionalities:
+The project represents a library of books. Books App is a single-page application developed using JavaScript classes and a Handlebars template. Each book has a title, price, cover, and rating. Book data is stored locally in the data.js file. JavaScript's function determines the color of the label under the book cover. Depending on the rating value, the background color is selected from the four colors specified in the method. The website has two functionalities:
 
 1. The ability to filter books by category <br /> Selecting a category grays out books that don't match the selected category.
 2. Open a book by double-clicking on the cover.
    Double clicking on the cover will add a heart in the upper right corner and scale the cover.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🛠️ <a id="overview">Languages and tools</a>
+
+|                                                                   Language / Tool                                                                    | Description                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------- |
+|                    ![HTML](https://img.shields.io/badge/HTML5-E34F26.svg?style-platic-=for-the-badge&logo=HTML5&logoColor=white)                     | Language used for structuring and presenting content on the World Wide Web. |
+|                     ![Sass](https://img.shields.io/badge/Sass-CC6699.svg?style-plastic-=for-the-badge&logo=Sass&logoColor=white)                     | CSS pre-procesor that make writing CSS more powerful.                       |
+| ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style-plastic-for-the-badge&logo=javascript&?logoWidth=100&?logoColor=%23F7DF1E) | To create dynamically updating content.                                     |
+|        ![HandleBars](https://img.shields.io/badge/Handlebars.js-000000.svg?style-plastic=for-the-badge&logo=handlebarsdotjs&logoColor=white)         | Library used to create reusable webpage templates in HTML document.         |
+|                  ![Eslint](https://img.shields.io/badge/ESLint-4B32C3.svg?style-plastic-=for-the-badge&logo=ESLint&logoColor=white)                  | Helps you find and fix problems with your JavaScript code.                  |
+|             ![Stylelint](https://img.shields.io/badge/stylelint-263238.svg?style-plastic-=for-the-badge&logo=stylelint&logoColor=white)              | Helps avoid errors and enforce conventions                                  |
 
 ## 💻 <a id="demo">Demo</a>
 
