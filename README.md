@@ -27,7 +27,7 @@ The project represents a library of books. Books App is a single-page applicatio
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🛠️ <a id="languages">Languages & tools</a>
+## 🛠️ <a id="languages">Languages & tools :</a>
 
 |                                                                   Language / Tool                                                                    | Description                                                                 |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------- |
@@ -37,6 +37,8 @@ The project represents a library of books. Books App is a single-page applicatio
 |        ![HandleBars](https://img.shields.io/badge/Handlebars.js-000000.svg?style-plastic=for-the-badge&logo=handlebarsdotjs&logoColor=white)         | Library used to create reusable webpage templates in HTML document.         |
 |                  ![Eslint](https://img.shields.io/badge/ESLint-4B32C3.svg?style-plastic-=for-the-badge&logo=ESLint&logoColor=white)                  | Helps you find and fix problems with your JavaScript code.                  |
 |             ![Stylelint](https://img.shields.io/badge/stylelint-263238.svg?style-plastic-=for-the-badge&logo=stylelint&logoColor=white)              | Helps avoid errors and enforce conventions                                  |
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 <a id="demo">Demo</a>
 
